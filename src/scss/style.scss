@@ -1,10 +1,12 @@
-//Обнуление стилей браузеров
-// @import "_normalize";
-//Подключение шрифтов
-// @import "_fonts";
-//Подключение переменных
-// @import "_variables";
 
-//Подключение блоков
-@use "blocks/_setting";
-@use "blocks/header";
+//Глобальные стили
+@use "_setting";
+@use "_variables";
+@use "_mixins";
+@use "_components";
+
+//Блоки
+@use "blocks/_header";
+
+//Шрифт
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Tenor+Sans&display=swap');

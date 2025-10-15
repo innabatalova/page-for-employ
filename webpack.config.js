@@ -17,6 +17,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.html$/,
+        use: 'html-loader'
+      },
+      {
         test: /\.(s[ac]|c)ss$/i,
         use: [
           'style-loader',
@@ -26,11 +30,7 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        loader: "file-loader",
-        options: {
-          publicPath: "../",
-          name: `assets/image/[name].[ext]`,
-        },
+        type: 'asset/resource',
       },
 
       {

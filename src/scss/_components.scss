@@ -1,0 +1,44 @@
+@use 'variables';
+@use 'mixins';
+
+body {
+  background-color: #782890;
+}
+
+@mixin button ($padding, $border-color, $bg-color) {
+  padding: $padding;
+  text-transform: uppercase;
+  background-color: $bg-color;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+}
+
+.icon-bar {
+  display: grid;
+  place-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: variables.$color-primary;
+  border: 5px solid #286690;
+  border-radius: 50%;
+}
+
+.button-main {
+  @include button(12.5px 60px, variables.$color-white, variables.$color-primary);
+  @include mixins.font-primary (400, variables.$color-white, 13px, 16px)
+}
+
+.input-main {
+  @include mixins.font-primary (400, variables.$color-primary, 18px, 22px);
+  width: 370px;
+  padding: 12px 35px 12px 10px;
+  background-color: rgba(variables.$color-white, 0.85);;
+  border: 1px solid variables.$color-white;
+  border-radius: 3px;
+  outline: none;
+
+  &::placeholder {
+    @include mixins.font-primary (400, variables.$color-fields, 18px);
+    
+  }
+}
