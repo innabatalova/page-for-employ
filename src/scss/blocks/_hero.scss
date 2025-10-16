@@ -1,0 +1,65 @@
+@use '../variables';
+@use '../mixins';
+@use '../components';
+
+.hero-section {
+  padding: 203px 0;
+  background-size: cover;
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 80px;
+    width: 65%;
+  }
+
+  &__title {
+
+    &-primary {
+      @include mixins.font-primary (700, variables.$color-primary, 48px, 58px);
+      text-transform: uppercase;
+    }
+
+    &-secondary {
+      @include mixins.font-primary (700, variables.$color-black, 48px, 58px);
+      text-transform: uppercase;
+    }
+  }
+
+  &__subtitle {
+    @include mixins.font-primary (700, variables.$color-black, 20px, 24px);
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    list-style-type: '  -  ';
+    padding-left: 25px;
+
+    &-item {
+      @include mixins.font-primary (400, variables.$color-black, 20px, 24px);
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    column-gap: 30px;
+  }
+
+  &__button {
+
+    &--order {
+      @include components.button(12.5px 60px, variables.$color-white, variables.$color-primary);
+      @include mixins.font-primary (400, variables.$color-white, 13px, 16px);
+    }
+
+    &--more {
+      @include components.button(12.5px 60px, variables.$color-btn-border-more, variables.$color-white);
+      @include mixins.font-primary (400, variables.$color-btn-hero, 13px, 16px);
+    }
+  }
+}

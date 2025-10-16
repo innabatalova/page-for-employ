@@ -1,10 +1,6 @@
 @use 'variables';
 @use 'mixins';
 
-body {
-  background-color: #782890;
-}
-
 @mixin button ($padding, $border-color, $bg-color) {
   padding: $padding;
   text-transform: uppercase;
@@ -29,7 +25,7 @@ body {
 }
 
 .input-main {
-  @include mixins.font-primary (400, variables.$color-primary, 18px, 22px);
+  @include mixins.font-primary (400, variables.$color-fields, 18px, 22px);
   width: 370px;
   padding: 12px 35px 12px 10px;
   background-color: rgba(variables.$color-white, 0.85);;

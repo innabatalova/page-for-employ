@@ -23,7 +23,7 @@ module.exports = {
       {
         test: /\.(s[ac]|c)ss$/i,
         use: [
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader',
         ],
@@ -65,7 +65,7 @@ module.exports = {
       patterns: [{ from: "static", to: "dist" }],
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].[contenthash].scss",
+      filename: "[name].[contenthash].css",
     }),
   ],
 }

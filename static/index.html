@@ -5,12 +5,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <title>Test page</title>
 </head>
 
 <body>
 
-  <div class="icon-bar">
+  <!-- <div class="icon-bar">
     <img src='./images/icon-search.svg' alt="Иконка поиска">
   </div>
 
@@ -23,12 +25,53 @@
   <br>
   <br>
 
-  <input class="input-main" name="email" type="email" placeholder="Ваше имя" autocomplete="on">
+  <input class="input-main" name="email" type="email" placeholder="Ваше имя" autocomplete="on"> -->
+
 
   <!-- header start -->
+  <header class="header">
+    <div class="container header__container">
+      <div class="header__logo">
+        <img src='./images/logo-header.svg' alt="Логотип">
+      </div>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li class="header__menu-item"><a class="header__link header__link-primary" href="#">Бизнес</a></li>
+          <li class="header__menu-item"><a class="header__link" href="#">О нас</a></li>
+          <li class="header__menu-item"><a class="header__link" href="#">Цены</a></li>
+          <li class="header__menu-item"><a class="header__link" href="#">Оформить заказ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
   <!-- header end -->
 
   <!-- hero section start -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-section__wrap">
+        <h2 class="hero-section__title">
+          <span class="hero-section__title-primary">Lorem ipsum</span>
+          <span class="hero-section__title-secondary">dolor sit ametconsectetur</span>
+          <span class="hero-section__title-primary">adipiscing</span>
+        </h2>
+
+        <div class="hero-section__advantages">
+          <p class="hero-section__subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
+          <ul class="hero-section__list">
+            <li class="hero-section__list-item">Totam rem aperiam eaque ipsa</li>
+            <li class="hero-section__list-item">Sit voluptatem accusantium doloremque laudantium</li>
+            <li class="hero-section__list-item">Sed ut perspiciatis, unde omnis iste natus error</li>
+          </ul>
+        </div>
+
+        <div class="hero-section__buttons">
+          <button class="hero-section__button hero-section__button--order">Заказать</button>
+          <button class="hero-section__button hero-section__button--more">Подробнее</button>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- hero section end -->
 
   <!-- order section start -->
@@ -36,6 +79,7 @@
 
   <!-- footer start -->
   <!-- footer end -->
+
 
 
 </body>

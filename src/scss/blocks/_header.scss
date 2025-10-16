@@ -1,5 +1,49 @@
+@use '../variables';
+@use '../mixins';
+
 .header {
-  width: 100px;
-  height: 100px;
-  background-color: red;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: rgb(variables.$color-bg-header, 90%);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 33px;
+    padding-bottom: 33px;
+  }
+
+  &__logo {
+    max-width: 245px;
+  }
+
+  &__nav {
+    max-width: 70%;
+  }
+
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px 60px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  &__link {
+    @include mixins.font-primary (400, variables.$color-white, 13px, 16px);
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &-primary {
+      @include mixins.font-primary (700, variables.$color-primary, 13px, 16px);
+    }
+  }
+
+
 }

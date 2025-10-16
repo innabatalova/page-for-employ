@@ -9,7 +9,15 @@ body {
   min-width: 320px;
 }
 
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+}
+
 .container {
+  width: 100%;
   max-width: 1172px;
   margin: auto;
 }
