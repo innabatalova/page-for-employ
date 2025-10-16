@@ -1,0 +1,74 @@
+@use '../variables';
+@use '../mixins';
+
+.footer {
+  padding: 30px 0;
+  background-color: variables.$color-bg-footer;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__separator {
+    background-color: variables.$color-footer-icons;
+    border-right: 1px solid variables.$color-footer-icons;
+    ;
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 30%;
+  }
+
+  &__text {
+    @include mixins.font-primary (400, variables.$color-white, 13px, 16px);
+  }
+
+  &-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__payment {
+
+    &-methods {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 10px 40px;
+      flex-wrap: wrap;
+      max-width: 40%;
+    }
+
+    &-method {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+    }
+
+    &-name {
+      @include mixins.font-primary (400, variables.$color-footer-icons, 13px, 16px);
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px 40px;
+    flex-wrap: wrap;
+    max-width: 30%;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    text-decoration: none;
+
+    &-name {
+      @include mixins.font-primary (400, variables.$color-white, 13px, 16px);
+    }
+  }
+}

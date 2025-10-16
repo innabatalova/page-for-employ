@@ -1,7 +1,8 @@
 @use 'variables';
 @use 'mixins';
 
-@mixin button ($padding, $border-color, $bg-color) {
+@mixin button ($padding, $border-color, $bg-color, $width) {
+  width: $width;
   padding: $padding;
   text-transform: uppercase;
   background-color: $bg-color;
@@ -20,7 +21,7 @@
 }
 
 .button-main {
-  @include button(12.5px 60px, variables.$color-white, variables.$color-primary);
+  @include button(12.5px 60px, variables.$color-white, variables.$color-primary, 183px);
   @include mixins.font-primary (400, variables.$color-white, 13px, 16px)
 }
 

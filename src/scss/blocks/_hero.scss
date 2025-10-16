@@ -5,6 +5,7 @@
 .hero-section {
   padding: 203px 0;
   background-size: cover;
+  background-position-x: right;
 
   &__wrap {
     display: flex;
@@ -47,18 +48,19 @@
 
   &__buttons {
     display: flex;
-    column-gap: 30px;
+    flex-wrap: wrap;
+    gap: 10px 30px;
   }
 
   &__button {
 
     &--order {
-      @include components.button(12.5px 60px, variables.$color-white, variables.$color-primary);
+      @include components.button(13px, variables.$color-white, variables.$color-primary, 183px);
       @include mixins.font-primary (400, variables.$color-white, 13px, 16px);
     }
 
     &--more {
-      @include components.button(12.5px 60px, variables.$color-btn-border-more, variables.$color-white);
+      @include components.button(13px, variables.$color-btn-border-more, variables.$color-white, 183px);
       @include mixins.font-primary (400, variables.$color-btn-hero, 13px, 16px);
     }
   }
